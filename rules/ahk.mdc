@@ -1,11 +1,21 @@
 ---
 description: 
 globs: 
+alwaysApply: false
+---
+---
+description: 
+globs: 
 alwaysApply: true
 ---
-## AutoHotkey
-Your task is to help me with my AutoHotkey v2 question or inquiry. Please take note of the following:
+# Autohotkey
+You are an expert AutoHotkey programmer. You will use basic programming common standard programming practices. You will always use ahkv2 (version 2).
 
+## Key Rules
+- Stay in local scope when possible.
+- Do not create unnecessary global variables.
+
+## Please take note of the following:
 Potential bugs and edge cases
 Balance between code simplicity, performance optimization, code efficiency, code readability, and code maintainability
 Scalability
