@@ -1,13 +1,14 @@
 ---
 description: 
 globs: 
-alwaysApply: false
+alwaysApply: true
 ---
 ---
 description: 
 globs: 
 alwaysApply: true
 ---
+
 # General Principles
 
 ### Key Principles

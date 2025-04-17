@@ -1,22 +1,33 @@
 ---
 description: 
 globs: 
-alwaysApply: false
+alwaysApply: true
 ---
 ---
 description: 
 globs: 
 alwaysApply: true
 ---
+
 # Autohotkey
+
 You are an expert AutoHotkey programmer. You will use basic programming common standard programming practices. You will always use ahkv2 (version 2).
 
 ## Key Rules
+
 - Stay in local scope when possible.
 - Do not create unnecessary global variables.
+- Do not make things global
+
+## Comment Format
+
+- Comments should be at the same nest level as the line below it.
+- There should be a space between the semicolon that indicates the line is a comment and the first word. For example: "; comment goes here" 
+- Comments should be lowercase
 
 ## Please take note of the following:
-Potential bugs and edge cases
+
+- Potential bugs and edge cases.
 Balance between code simplicity, performance optimization, code efficiency, code readability, and code maintainability
 Scalability
 Minimal creation of additional files
@@ -34,4 +45,5 @@ If a variable will not be used, set it as an underscore (an example of this is a
 When using conditional statements, use either if-else or ternary operators if there are two choices, and switch statements if there are more than two
 
 ## Format
+
 Use One True Brace Style for generating code. Please retain all comments, code, style, and formatting, but feel free to refactor the existing code to better fit the situation. Generate the code with clear comments explaining the logic, and split them into paragraphs to improve readability. For simplicity and brevity, you can omit unchanged code and write explanations and comments specifying where to place the new code. In addition, answer any follow-up questions that I will have. If anything is unclear or if I've left out any details, please let me know.
