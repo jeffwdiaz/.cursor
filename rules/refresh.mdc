@@ -8,6 +8,7 @@ description:
 globs: 
 alwaysApply: false
 ---
+
 {my query (e.g., "the login button still crashes")}
 
 ---

@@ -4,8 +4,8 @@ globs:
 alwaysApply: true
 ---
 ---
-description: 
-globs: 
+description: Rules for AutoHotkey
+globs: "**/*.ahk"
 alwaysApply: true
 ---
 

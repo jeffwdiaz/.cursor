@@ -4,7 +4,7 @@ globs:
 alwaysApply: true
 ---
 ---
-description: 
+description: Powershell Rules
 globs: 
 alwaysApply: true
 ---
