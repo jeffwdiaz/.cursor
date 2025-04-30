@@ -1,0 +1,58 @@
+---
+description: Cursor Ignore Patterns
+globs: 
+alwaysApply: true
+---
+# Cursor Ignore Rules
+
+The following patterns will be ignored by Cursor during indexing:
+
+## Build and Output Directories
+- **/node_modules/**
+- **/dist/**
+- **/.svelte-kit/**
+- **/build/**
+- **/out/**
+
+## Cache and Temporary Files
+- **/.cache/**
+- **/.temp/**
+- **/tmp/**
+
+## Version Control
+- **/.git/**
+- **/.gitignore**
+
+## Environment and Configuration
+- **/.env**
+- **/.env.*
+- **/.npmrc**
+
+## IDE and Editor Files
+- **/.vscode/**
+- **/.idea/**
+- **/.DS_Store**
+
+## Package Files
+- **/package-lock.json**
+- **/yarn.lock**
+
+## Large Media and Binary Files
+- **/*.mp4**
+- **/*.mov**
+- **/*.wav**
+- **/*.mp3**
+- **/*.pdf**
+- **/*.zip**
+- **/*.tar**
+- **/*.gz**
+
+## Log Files
+- **/*.log**
+- **/logs/**
+
+## Test Coverage
+- **/coverage/**
+- **/.nyc_output/**
+
+
