@@ -1,7 +1,7 @@
 ---
-description: Cursor Ignore Patterns
+description: 
 globs: 
-alwaysApply: true
+alwaysApply: false
 ---
 # Cursor Ignore Rules
 
