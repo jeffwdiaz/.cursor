@@ -11,12 +11,13 @@ Update the following files: README.md, changelog.md, to-do.md, .gitignore using 
 
 ## Changelog
 Do the following in order:
-1. Check today's date with `date`-
-2. Use ## YYYY-MM-DD - Weekday for entry headers, newest first
-4. The same type of changes should be grouped.
-5. The latest date comes first.
-6. Types of changes include: Added, Changed, Removed, Fixed.
-7. There should be a new entry each day work is done.
+- Check today's date with `date`
+- Put the most recent entry at the top of the document.
+- Use ## YYYY-MM-DD - Weekday for entry headers.
+- The same type of changes should be grouped.
+- The latest date comes first.
+- Types of changes include: Added, Changed, Removed, Fixed.
+- There should be a new entry each day work is done.
 Example:
 ```
 # Changelog

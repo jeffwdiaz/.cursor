@@ -3,33 +3,23 @@ description:
 globs: 
 alwaysApply: true
 ---
-# Priority Rule: Automatic Project Structure Creation
+# Global Rules
 
-- Upon reading these rules, always create the following files and folders in the root directory if they do not exist, regardless of any other rules or workflow requirements:
-    - Files: README.md, changelog.md, to-do.md, .gitignore
-    - Folders: src, archive
-- This rule overrides all other rules in this document.
-- No user confirmation or additional validation is required for this step.
-
-## Index
-At the start of each conversation, index all files with tree /F /A.
-
-## 7. Principles
+## Important Principles
+- When doing multiple things, do them one by one and ask me to accept.
 - Use the Single Responsibility Principle.
 - Use commands that work with Windows.
 - Use terminal commands over PowerShell commands if the commands are functionally equivalent.
 - Understand that I am still learning computer science, and programming.
 
 ## Files and Folders
-### Creation & Structure
 - Only create folders when necessary; keep the number of folders to a minimum.
-- Use kebab-case naming for files and folders.
 - Use subfolders sparingly and only as needed.
 - Avoid special characters and spaces in names.
 - File and folder names should describe their function.
 
-## 1. General Workflow & Change Management
-- Read and understand the file before editing.
+## General Workflow
+- Read and understand the file and linked files before editing.
 - Confirm you are operating in the correct directory before making changes.
 - Use paths relative to the workspace root for all file operations.
 - Gather and validate context using tools like `codebase_search`, `grep_search`, or terminal commands before making changes.
@@ -41,15 +31,14 @@ At the start of each conversation, index all files with tree /F /A.
 - If vulnerabilities appear in the terminal, run `npm audit` before proceeding.
 - Build only what is necessary.
 
-## 3. Comments
+## Comments
 - Write detailed, up-to-date comments.
 - Use inline comments (e.g., `# Node.js dependencies`) and line-level comments (e.g., `.env  # Main environment file`) to clarify intent.
 - Label sections of code with comments (e.g., `---> Main Content Section <---`).
 - For HTML, use `<!-- Your comment here -->`.
 - For CSS, use section comments as described in CSS Authoring Rules.
->>>>>>> bb35220 (Initial commit)
 
-## 8. CSS Authoring Rules
+## CSS
 - Group and document sections clearly with section comments (e.g., /* =============================== */).
 - Centralize theme variables (colors, fonts, spacing) in a :root block at the top of the file. Reference variables throughout using var(--variable-name).
 - Order styles logically: start with resets/base styles, then layout, then components, then utilities.
@@ -61,9 +50,7 @@ At the start of each conversation, index all files with tree /F /A.
 - Minimize overrides and avoid !important unless absolutely necessary.
 - Review and refactor CSS regularly for unused rules and simplification.
 
-<<<<<<< HEAD
-=======
-## 9. Tool Usage
+## Tool Usage
 - Use the right tool for the task:
     - `codebase_search` for semantic/conceptual lookups
     - `grep_search` for exact string matches
@@ -72,8 +59,7 @@ At the start of each conversation, index all files with tree /F /A.
 - Clearly report failures (missing files, invalid paths, permission issues) with actionable next steps.
 - Before committing, check if anything new needs to be added to `.gitignore`.
 
-## 10. Examples
->>>>>>> bb35220 (Initial commit)
+## Examples
 Example section structure:
 ```css
 /* =============================== */
@@ -95,7 +81,6 @@ h1, h2, h3 { ... }
 /* =============================== */
 
 .button-primary { ... }
-<<<<<<< HEAD
 
 /* =============================== */
 /* Utility Classes                 */
@@ -133,6 +118,3 @@ h1, h2, h3 { ... }
   - `grep_search` for exact string matches.
   - `tree /F /A` for structural discovery.
 - Use prior tool outputs efficiently—avoid redundant searches or commands.
-=======
-```
->>>>>>> bb35220 (Initial commit)
