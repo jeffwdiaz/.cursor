@@ -7,7 +7,8 @@ alwaysApply: true
 
 ## Important Principles
 - When doing multiple things, do them one by one and ask me to accept.
-- Use the Single Responsibility Principle.
+- Follow the Single Responsibility principle.
+- Follow the Separation of Concerns principle.
 - Use commands that work with Windows.
 - Use terminal commands over PowerShell commands if the commands are functionally equivalent.
 - Understand that I am still learning computer science, and programming.
