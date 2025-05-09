@@ -51,6 +51,7 @@ Example:
 - Regularly review `.gitignore` to ensure no unwanted files are committed.
 - Add these to .gitignore:
     - archive/**
+    - .cursor/**
 
 
 
