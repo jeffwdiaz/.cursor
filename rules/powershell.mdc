@@ -1,7 +1,11 @@
 ---
 description: 
 globs: 
+<<<<<<< HEAD
 alwaysApply: true
+=======
+alwaysApply: false
+>>>>>>> b26cbecda24cb58101249a227c7eb5fd8fd0a355
 ---
 # PowerShell Command Guidelines
 

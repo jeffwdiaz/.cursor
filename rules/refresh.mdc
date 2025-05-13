@@ -3,11 +3,7 @@ description:
 globs: 
 alwaysApply: false
 ---
-{my query (e.g., "the login button still crashes")}
-
----
-
-Diagnose and resolve the issue described above using a systematic, validation-driven approach:
+# Diagnose and resolve the issue described above using a systematic, validation-driven approach:
 
 1. **Collect Precise Context**:
    - Gather all relevant details: error messages, logs, stack traces, and observed behaviors tied to the issue.

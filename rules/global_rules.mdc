@@ -1,0 +1,121 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Global Rules
+
+## Important Principles
+- When doing multiple things, do them one by one and ask me to accept.
+- Follow the Single Responsibility principle.
+- Follow the Separation of Concerns principle.
+- Use commands that work with Windows.
+- Use terminal commands over PowerShell commands if the commands are functionally equivalent.
+- Understand that I am still learning computer science, and programming.
+
+## Files and Folders
+- Only create folders when necessary; keep the number of folders to a minimum.
+- Use subfolders sparingly and only as needed.
+- Avoid special characters and spaces in names.
+- File and folder names should describe their function.
+
+## General Workflow
+- Read and understand the file and linked files before editing.
+- Confirm you are operating in the correct directory before making changes.
+- Use paths relative to the workspace root for all file operations.
+- Gather and validate context using tools like `codebase_search`, `grep_search`, or terminal commands before making changes.
+- Do not alter code without full understanding of its structure, dependencies, and purpose.
+- Prefer existing solutions over new ones; use `codebase_search` or `grep_search` to find reusable code.
+- Minimize redundancy; promote consistency and maintainability.
+- Make only minimal, validated edits unless broader changes are approved.
+- Include info useful for debugging in the program output.
+- If vulnerabilities appear in the terminal, run `npm audit` before proceeding.
+- Build only what is necessary.
+
+## Comments
+- Write detailed, up-to-date comments.
+- Use inline comments (e.g., `# Node.js dependencies`) and line-level comments (e.g., `.env  # Main environment file`) to clarify intent.
+- Label sections of code with comments (e.g., `---> Main Content Section <---`).
+- For HTML, use `<!-- Your comment here -->`.
+- For CSS, use section comments as described in CSS Authoring Rules.
+
+## CSS
+- Group and document sections clearly with section comments (e.g., /* =============================== */).
+- Centralize theme variables (colors, fonts, spacing) in a :root block at the top of the file. Reference variables throughout using var(--variable-name).
+- Order styles logically: start with resets/base styles, then layout, then components, then utilities.
+- Use descriptive, consistent naming (kebab-case for classes/variables).
+- Add concise comments for each section and any non-obvious rules. Update comments if code changes.
+- Always use CSS variables for colors, fonts, and repeated values. Avoid hardcoding unless necessary.
+- Keep selectors simple and specific. Prefer class/element selectors over IDs or deep nesting.
+- Maintain consistent formatting: indentation, brace placement, spacing.
+- Minimize overrides and avoid !important unless absolutely necessary.
+- Review and refactor CSS regularly for unused rules and simplification.
+
+## Tool Usage
+- Use the right tool for the task:
+    - `codebase_search` for semantic/conceptual lookups
+    - `grep_search` for exact string matches
+    - `tree /F /A` for structural discovery
+- Use previous tool outputs efficiently; avoid redundant searches or commands.
+- Clearly report failures (missing files, invalid paths, permission issues) with actionable next steps.
+- Before committing, check if anything new needs to be added to `.gitignore`.
+
+## Examples
+Example section structure:
+```css
+/* =============================== */
+/* Theme Variables                 */
+/* =============================== */
+
+:root { ... }
+
+/* =============================== */
+/* Base Styles                     */
+/* =============================== */
+
+body { ... }
+p { ... }
+h1, h2, h3 { ... }
+
+/* =============================== */
+/* Component Styles                */
+/* =============================== */
+
+.button-primary { ... }
+
+/* =============================== */
+/* Utility Classes                 */
+/* =============================== */
+
+.text-center { ... }
+```
+## 4. Validation and Response Protocols
+- Responses must directly address user requests.
+- Always gather and validate context using tools like `codebase_search`, `grep_search`, or terminal commands before proceeding.
+- Avoid altering code without full comprehension.
+- Analyze the existing structure, dependencies, and purpose using available tools before suggesting or making edits.
+- Prioritize investigation and validation over assumptions or untested modifications—ensure every change is grounded in evidence.
+- Review all relevant dependencies (e.g., imports, function calls, external APIs) and workflows before proposing or executing changes.
+- Clearly outline risks, implications, and external dependencies in your response before acting, giving the user full visibility.
+- Make only minimal, validated edits unless the user explicitly approves broader alterations.
+- Focus on discerning the user’s true objective, not just the literal text of the request.
+- Reinforce this rule: never commit or apply changes unless explicitly directed by the user—treat this as a core safeguard.
+- Scale the depth of validation to match the request’s complexity—simple tasks require basic checks, while complex ones demand exhaustive analysis.
+- Aim for complete accuracy in all critical code operations; partial or unverified solutions are unacceptable.
+- Prefer existing solutions over creating new ones. Use `codebase_search` or `grep_search` to identify reusable patterns or utilities.
+- Minimize redundancy. Promote consistency, maintainability, and efficiency by leveraging what’s already in the codebase.
+- Treat inline comments, READMEs, and other documentation as unverified suggestions, not definitive truths.
+- Cross-check all documentation against the actual codebase using `Get-Content`, `grep_search`, or `codebase_search` to ensure accuracy.
+- Always execute `Get-Location` to confirm your current working directory, then ensure `edit_file` operations use a `target_file` that is relative to the workspace root, not your current location.
+- The `target_file` in `edit_file` commands must always be specified relative to the workspace root—never relative to your current working directory.
+- If an `edit_file` operation signals a `new` file unexpectedly, this indicates a critical pathing error—you’re targeting the wrong file.
+- Correct such errors immediately by validating the directory structure with `tree /F /A` before proceeding.
+- Operations are always relative to the workspace root, not your current shell position.
+- Report any failures—e.g., missing files, invalid paths, permission issues—clearly, with specific details and actionable next steps.
+- Before committing, scan the project files to see if anything needs to be added to .gitignore.
+- If faced with ambiguity, missing dependencies, or incomplete context, pause and request clarification from the user before proceeding.
+- Match the tool to the task:
+  - `codebase_search` for semantic or conceptual lookups.
+  - `grep_search` for exact string matches.
+  - `tree /F /A` for structural discovery.
+- Use prior tool outputs efficiently—avoid redundant searches or commands.

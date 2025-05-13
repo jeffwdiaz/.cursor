@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Archive
+
+- If a file is not needed, store it in the archive folder.
+
+- Do not ever delete any file.
