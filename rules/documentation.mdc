@@ -7,15 +7,15 @@ alwaysApply: false
 Update the following files: README.md, changelog.md, to-do.md, .gitignore using the rules below. Do not ask me if I want to proceed, just do it. Do not stop until these files are all updated.
 
 ## README
-- Readme file should include: Project Overview, Project Goal, Tech Stack, Folder Structure.
+- Readme file should include: Project Overview, Project Goal, Tech Stack.
 
 ## Changelog
 Do the following in order:
 - Check today's date with `date`
 - Put the most recent entry at the top of the document.
-- Use ## YYYY-MM-DD - Weekday for entry headers.
+- Use `## YYYY-MM-DD - Weekday` for entry headers.
 - The same type of changes should be grouped.
-- The latest date comes first.
+- The latest date comes first and should be towards the top of the file.
 - Types of changes include: Added, Changed, Removed, Fixed.
 - There should be a new entry each day work is done.
 Example:
@@ -23,26 +23,19 @@ Example:
 # Changelog
 
 ## 2025-04-29 - Tuesday
-### Added
-- New feature implemented
-- Complex change with details:
+- Added: New feature implemented
+- Added: Complex change with details:
   - Sub-item one
   - Sub-item two with `code` reference
+- Changed: Updated existing functionality
+- Changed: Modified `component.css` styling
+- Removed: Deprecated function `oldFunction()`
+- Fixed: Resolved bug in system
 
-### Changed
-- Updated existing functionality
-- Modified `component.css` styling
-
-### Removed
-- Deprecated function `oldFunction()`
-
-### Fixed
-- Resolved bug in system
+## 2025-04-28 - Monday
+- Added: A new features
+- Added: Complex change with details
 ```
-
-### To-do Checklist
-- The to do checklist should include step by step instructions to accomplish the project goal.
-- Check off the items on the list as they are completed.
 
 ## Gitignore Standards
 - Only add entries as needed for this specific project; do not pre-populate with generic/common ignores.
@@ -50,10 +43,13 @@ Example:
 - Add clear, concise comments explaining the purpose of each entry or section.
 - Regularly review `.gitignore` to ensure no unwanted files are committed.
 - Add these to .gitignore:
-    - archive/**
-    - .cursor/**
+```
+# All .cursor folders and all files within
+**/.cursor/** 
 
+# All archive folders and all files within
+**/archive/**
 
-
-
-
+# All environment variables
+**/.env
+```
