@@ -13,7 +13,7 @@ alwaysApply: true
 - Use the Single Responsibility Principle.
 - Know that I am using Windows 11.
 - Use commands that work with Windows.
-- Always index the project (using tree /F /A) at the start of each chat session before responding to any code-related requests. If the indexing is canceled or blocked by the user, clearly communicate that the project has not been indexed and proceed only with explicit user approval. 
+- Always index the project using `tree /F /A` at the start of each chat session before responding to any code-related requests. If the indexing is canceled or blocked by the user, clearly communicate that the project has not been indexed and proceed only with explicit user approval. 
 - Always use terminal commands over PowerShell commands if the commands are functionally equivalent. 
 - Build only what is necessary.
 
