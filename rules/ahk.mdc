@@ -13,7 +13,8 @@ You are an expert AutoHotkey programmer. You will use basic programming common s
 - Do not create unnecessary global variables.
 - Do not make things global
 - Use local documentation to check for validity and syntax
-
+    - do not assume, instead check for validity
+    
 ## Comment Format
 
 - Comments should be at the same nest level as the line below it.
