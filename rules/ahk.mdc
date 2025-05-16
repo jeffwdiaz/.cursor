@@ -1,13 +1,6 @@
 ---
 description: 
-globs: 
-alwaysApply: true
----
-## AutoHotkey
-Your task is to help me with my AutoHotkey v2 question or inquiry. Please take note of the following:
-
-Potential bugs and edge cases
-=======
+globs: .ahk
 alwaysApply: false
 ---
 # Autohotkey
@@ -19,6 +12,7 @@ You are an expert AutoHotkey programmer. You will use basic programming common s
 - Stay in local scope when possible.
 - Do not create unnecessary global variables.
 - Do not make things global
+- Use local documentation to check for validity and syntax
 
 ## Comment Format
 
