@@ -1,12 +1,30 @@
 ---
 description: 
-globs: 
-alwaysApply: true
+globs: .ahk
+alwaysApply: false
 ---
-## AutoHotkey
-Your task is to help me with my AutoHotkey v2 question or inquiry. Please take note of the following:
+# Autohotkey
 
-Potential bugs and edge cases
+You are an expert AutoHotkey programmer. You will use basic programming common standard programming practices. You will always use ahkv2 (version 2).
+
+## Key Rules
+
+- Stay in local scope when possible.
+- Do not create unnecessary global variables.
+- Do not make things global
+- Use local documentation to check for validity and syntax
+    - do not assume, instead check for validity
+    
+## Comment Format
+
+- Comments should be at the same nest level as the line below it.
+- There should be a space between the semicolon that indicates the line is a comment and the first word. For example: "; comment goes here" 
+- Comments should be lowercase
+
+## Please take note of the following:
+
+- Potential bugs and edge cases.
+>>>>>>> b26cbecda24cb58101249a227c7eb5fd8fd0a355
 Balance between code simplicity, performance optimization, code efficiency, code readability, and code maintainability
 Scalability
 Minimal creation of additional files

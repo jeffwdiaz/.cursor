@@ -5,61 +5,41 @@ alwaysApply: true
 ---
 # Global Rules
 
-## Initial Project Creation
-- Create these files if they do not exist: README.md, changelog.md, to-do.md, .env, .gitignore
-- Create these folders if they do not exist: venv, src, archive
-
-## 1. General Workflow
-- Use the Single Responsibility Principle.
-- Know that I am using Windows 11.
+## Important Principles
+- When doing multiple things, do them one by one and ask me to accept.
+- Follow the Single Responsibility principle.
+- Follow the Separation of Concerns principle.
 - Use commands that work with Windows.
-- Always index the project using `tree /F /A` at the start of each chat session before responding to any code-related requests. If the indexing is canceled or blocked by the user, clearly communicate that the project has not been indexed and proceed only with explicit user approval. 
-- Always use terminal commands over PowerShell commands if the commands are functionally equivalent. 
+- Use terminal commands over PowerShell commands if the commands are functionally equivalent.
+- Understand that I am still learning computer science, and programming.
+
+## Files and Folders
+- Only create folders when necessary; keep the number of folders to a minimum.
+- Use subfolders sparingly and only as needed.
+- Avoid special characters and spaces in names.
+- File and folder names should describe their function.
+
+## General Workflow
+- Read and understand the file and linked files before editing.
+- Confirm you are operating in the correct directory before making changes.
+- Use paths relative to the workspace root for all file operations.
+- Gather and validate context using tools like `codebase_search`, `grep_search`, or terminal commands before making changes.
+- Do not alter code without full understanding of its structure, dependencies, and purpose.
+- Prefer existing solutions over new ones; use `codebase_search` or `grep_search` to find reusable code.
+- Minimize redundancy; promote consistency and maintainability.
+- Make only minimal, validated edits unless broader changes are approved.
+- Include info useful for debugging in the program output.
+- If vulnerabilities appear in the terminal, run `npm audit` before proceeding.
 - Build only what is necessary.
 
-## 2. Gitignore Standards
-- Do not pre-populate .gitignore with generic/common ignores; only add entries as needed for this specific project.
-- Whenever editing a `.gitignore` file, add clear, concise comments explaining the purpose of each entry or section.
-- Group related ignores (e.g., Node dependencies, build output, OS files, environment files, tool-specific files).
+## Comments
+- Write detailed, up-to-date comments.
 - Use inline comments (e.g., `# Node.js dependencies`) and line-level comments (e.g., `.env  # Main environment file`) to clarify intent.
+- Label sections of code with comments (e.g., `---> Main Content Section <---`).
+- For HTML, use `<!-- Your comment here -->`.
+- For CSS, use section comments as described in CSS Authoring Rules.
 
-## 3. Comments
-- Write detailed comments.
-- Update comments when editing code if it needs to be updated.
-- HTML comment example: <!-- Your comment here -->
-
-## 5. File and Folder Structure
-- Use as few folders as necessary.
-- Folder names should be descriptive but short.
-- Use kebab-case naming.
-- Use subfolders as needed, but sparingly.
-- Avoid special characters and spaces.
-- File names should describe the function of the file.
-- File names and folders should be readable and easily understood.
-- Keep it simple.
-- Avoid overly complex hierarchies and file structures.
-
-## 6. Documentation
-### README
-- Readme file should include: Project Overview, Project Goal, Tech Stack, Folder Structure.
-### Changelog
-- update the changelog.md file with changes every 15 minutes if necessary.
-- The same type of changes should be grouped.
-- The latest date comes first.
-- Types of changes include: Added, Changed, Removed, Fixed
-- There should be a new entry each day.
-- It should start with a day number, and count up from there. The day counting should skip Fridays.
-- Ask me what day we are on if confused.
-- Example day 32: `## [Day 32] - 2025-04-21`
-- Example day 33: `## [Day 33] - 2025-04-22`
-### To-do Checklist
-- The to do checklist should include step by step instructions to accomplish the project goal
-- Check off the items on the list as we finish them.
-
-## 7. Principles
-- Maintain readable and understandable structure.
-
-## 8. CSS Authoring Rules
+## CSS
 - Group and document sections clearly with section comments (e.g., /* =============================== */).
 - Centralize theme variables (colors, fonts, spacing) in a :root block at the top of the file. Reference variables throughout using var(--variable-name).
 - Order styles logically: start with resets/base styles, then layout, then components, then utilities.
@@ -71,6 +51,16 @@ alwaysApply: true
 - Minimize overrides and avoid !important unless absolutely necessary.
 - Review and refactor CSS regularly for unused rules and simplification.
 
+## Tool Usage
+- Use the right tool for the task:
+    - `codebase_search` for semantic/conceptual lookups
+    - `grep_search` for exact string matches
+    - `tree /F /A` for structural discovery
+- Use previous tool outputs efficiently; avoid redundant searches or commands.
+- Clearly report failures (missing files, invalid paths, permission issues) with actionable next steps.
+- Before committing, check if anything new needs to be added to `.gitignore`.
+
+## Examples
 Example section structure:
 ```css
 /* =============================== */
