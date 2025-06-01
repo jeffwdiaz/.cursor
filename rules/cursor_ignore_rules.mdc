@@ -1,5 +1,5 @@
 ---
-description: 
+description: This is useful for indexing a project directory
 globs: 
 alwaysApply: false
 ---
@@ -54,5 +54,3 @@ The following patterns will be ignored by Cursor during indexing:
 ## Test Coverage
 - **/coverage/**
 - **/.nyc_output/**
-
-

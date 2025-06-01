@@ -53,3 +53,71 @@ Example:
 # All environment variables
 **/.env
 ```
+
+## Documentation Templates
+
+### README Template
+```markdown
+# Project Name
+
+## Overview & Goal
+Brief description and purpose
+
+## Tech Stack
+- Frontend/Backend/Database/Other: [List]
+
+## Quick Start
+1. Prerequisites
+2. Installation
+3. Configuration
+4. Run
+
+## Features & Architecture
+- Key features
+- System overview
+
+## API & Contributing
+- API docs link
+- Contribution guidelines
+```
+
+### API Documentation Template
+```markdown
+# API Documentation
+
+## Authentication
+[Auth method]
+
+## Endpoints
+### Endpoint Name
+- **Method**: GET/POST/PUT/DELETE
+- **URL**: `/api/endpoint`
+- **Params**: `param1` (type): Description
+- **Response**: `{ "key": "value" }`
+- **Errors**: 400, 401, 404
+```
+
+### Code Documentation Template
+```javascript
+/**
+ * @description What it does
+ * @param {type} param - Description
+ * @returns {type} Description
+ * @throws {ErrorType} When error occurs
+ */
+```
+
+### Changelog Template
+```markdown
+# Changelog
+
+## [Version] - YYYY-MM-DD
+- Added: New features
+- Changed: Updates
+- Fixed: Bug fixes
+- Security: Vulnerability fixes
+```
+
+
+
+

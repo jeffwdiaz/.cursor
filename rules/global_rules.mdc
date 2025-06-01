@@ -1,11 +1,20 @@
 ---
 description: 
 globs: 
-alwaysApply: true
+alwaysApply: false
 ---
 # Global Rules
 
+## Rule Commands
+These aliases should be recognized and executed automatically when typed in the chat. 
+- When user types:
+    - `ind` -> Run `tree /F /A` to index the project directory and follow [cursor_ignore_rules.mdc](mdc:.cursor/rules/cursor_ignore_rules.mdc)
+    - `upd` -> update documents using [update_docs.mdc](mdc:.cursor/rules/update_docs.mdc)
+    - `new` -> look in [new_proj.mdc](mdc:.cursor/rules/new_proj.mdc)
+
 ## Important Principles
+- Do not ever delete any file.
+- If a file is not needed, store it in the archive folder.
 - When doing multiple things, do them one by one and ask me to accept.
 - Follow the Single Responsibility principle.
 - Follow the Separation of Concerns principle.
@@ -18,6 +27,7 @@ alwaysApply: true
 - Use subfolders sparingly and only as needed.
 - Avoid special characters and spaces in names.
 - File and folder names should describe their function.
+- Use snake_case naming convention when possible
 
 ## General Workflow
 - Read and understand the file and linked files before editing.
@@ -58,7 +68,6 @@ alwaysApply: true
     - `tree /F /A` for structural discovery
 - Use previous tool outputs efficiently; avoid redundant searches or commands.
 - Clearly report failures (missing files, invalid paths, permission issues) with actionable next steps.
-- Before committing, check if anything new needs to be added to `.gitignore`.
 
 ## Examples
 Example section structure:
@@ -89,33 +98,55 @@ h1, h2, h3 { ... }
 
 .text-center { ... }
 ```
-## 4. Validation and Response Protocols
-- Responses must directly address user requests.
-- Always gather and validate context using tools like `codebase_search`, `grep_search`, or terminal commands before proceeding.
-- Avoid altering code without full comprehension.
-- Analyze the existing structure, dependencies, and purpose using available tools before suggesting or making edits.
-- Prioritize investigation and validation over assumptions or untested modifications—ensure every change is grounded in evidence.
-- Review all relevant dependencies (e.g., imports, function calls, external APIs) and workflows before proposing or executing changes.
-- Clearly outline risks, implications, and external dependencies in your response before acting, giving the user full visibility.
-- Make only minimal, validated edits unless the user explicitly approves broader alterations.
-- Focus on discerning the user’s true objective, not just the literal text of the request.
-- Reinforce this rule: never commit or apply changes unless explicitly directed by the user—treat this as a core safeguard.
-- Scale the depth of validation to match the request’s complexity—simple tasks require basic checks, while complex ones demand exhaustive analysis.
-- Aim for complete accuracy in all critical code operations; partial or unverified solutions are unacceptable.
-- Prefer existing solutions over creating new ones. Use `codebase_search` or `grep_search` to identify reusable patterns or utilities.
-- Minimize redundancy. Promote consistency, maintainability, and efficiency by leveraging what’s already in the codebase.
-- Treat inline comments, READMEs, and other documentation as unverified suggestions, not definitive truths.
-- Cross-check all documentation against the actual codebase using `Get-Content`, `grep_search`, or `codebase_search` to ensure accuracy.
-- Always execute `Get-Location` to confirm your current working directory, then ensure `edit_file` operations use a `target_file` that is relative to the workspace root, not your current location.
-- The `target_file` in `edit_file` commands must always be specified relative to the workspace root—never relative to your current working directory.
-- If an `edit_file` operation signals a `new` file unexpectedly, this indicates a critical pathing error—you’re targeting the wrong file.
-- Correct such errors immediately by validating the directory structure with `tree /F /A` before proceeding.
-- Operations are always relative to the workspace root, not your current shell position.
-- Report any failures—e.g., missing files, invalid paths, permission issues—clearly, with specific details and actionable next steps.
-- Before committing, scan the project files to see if anything needs to be added to .gitignore.
-- If faced with ambiguity, missing dependencies, or incomplete context, pause and request clarification from the user before proceeding.
-- Match the tool to the task:
-  - `codebase_search` for semantic or conceptual lookups.
-  - `grep_search` for exact string matches.
-  - `tree /F /A` for structural discovery.
-- Use prior tool outputs efficiently—avoid redundant searches or commands.
+## Validation and Response Protocols
+
+### Validation and Response Principles
+- Address user requests directly
+- Validate context before making changes
+- Never commit changes without explicit user approval
+- Scale validation depth to task complexity
+
+### File Operations
+- All paths must be relative to workspace root
+- Validate directory structure before file operations
+- Report failures with specific details and next steps
+
+### Code Changes
+- Make minimal, validated edits unless approved otherwise
+- Prefer existing solutions over new ones
+- Cross-check documentation against actual code
+- Review dependencies before changes
+
+## Error Handling Standards
+
+### Core Principles
+- Use try-catch for operations that might fails
+- Log errors with context (message, stack, timestamp)
+- Provide user-friendly messages
+- Never expose sensitive information
+
+### Error Types & Responses
+```javascript
+// Error Response Format
+{
+    "error": {
+        "code": "ERROR_CODE",
+        "message": "User-friendly message",
+        "details": { "field": "Additional info" }
+    }
+}
+
+// Error Logging Example
+try {
+    // Operation
+} catch (error) {
+    logger.error({
+        message: 'Operation failed',
+        error: error.message,
+        stack: error.stack,
+        context: { operation: 'name', timestamp: new Date().toISOString() }
+    });
+    throw new CustomError('User message', error);
+}
+
+```

@@ -1,21 +1,9 @@
 ---
 description: 
 globs: 
-<<<<<<< HEAD
-alwaysApply: true
-=======
 alwaysApply: false
->>>>>>> b26cbecda24cb58101249a227c7eb5fd8fd0a355
 ---
 # PowerShell Command Guidelines
-
-### PowerShell-Specific Command Rules
-
-- **Never use Unix-style commands in PowerShell**:
-  - ❌ Avoid using `| cat` for output handling
-  - ❌ Avoid using `grep` (use `Select-String` instead)
-  - ❌ Avoid using `ls` (use `Get-ChildItem` instead)
-  - ❌ Avoid using `pwd` (use `Get-Location` instead)
 
 ### Correct PowerShell Alternatives
 
@@ -24,6 +12,14 @@ alwaysApply: false
 - ✅ Use `Get-ChildItem` instead of `ls`
 - ✅ Use `Get-Location` instead of `pwd`
 - ✅ Use `Set-Location` instead of `cd`
+
+### PowerShell-Specific Command Rules
+
+- **Never use Unix-style commands in PowerShell**:
+  - ❌ Avoid using `| cat` for output handling
+  - ❌ Avoid using `grep` (use `Select-String` instead)
+  - ❌ Avoid using `ls` (use `Get-ChildItem` instead)
+  - ❌ Avoid using `pwd` (use `Get-Location` instead)
 
 ### Command Examples
 
