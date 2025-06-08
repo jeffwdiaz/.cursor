@@ -8,7 +8,10 @@ alwaysApply: true
 ## Rule Commands
 These aliases should be recognized and executed automatically when typed in the chat. 
 - When user types:
-    - `ind` -> Run `tree /F /A` to index the project directory and follow [cursor_ignore_rules.mdc](mdc:.cursor/rules/cursor_ignore_rules.mdc)
+    - `ind`:
+        - follow [cursor_ignore_rules.mdc](mdc:.cursor/rules/cursor_ignore_rules.mdc)
+        - run `tree /F /A` to index the project directory
+        - read README.md
     - `upd` -> update documents using [update_docs.mdc](mdc:.cursor/rules/update_docs.mdc)
     - `new` -> look in [new_proj.mdc](mdc:.cursor/rules/new_proj.mdc)
 
