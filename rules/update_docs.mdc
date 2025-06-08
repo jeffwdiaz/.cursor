@@ -1,5 +1,5 @@
 ---
-description: 
+description: This rule should be used when updating documents
 globs: 
 alwaysApply: false
 ---
