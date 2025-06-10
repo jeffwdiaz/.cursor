@@ -15,6 +15,9 @@ These aliases should be recognized and executed automatically when typed in the 
     - `upd` -> update documents using [update_docs.mdc](mdc:.cursor/rules/update_docs.mdc)
     - `new` -> look in [new_proj.mdc](mdc:.cursor/rules/new_proj.mdc)
 
+## Filetype Rules
+- When discussing Autohotkey, reference [ahk_rules.mdc](mdc:.cursor/rules/ahk_rules.mdc)
+
 ## Important Principles
 - Do not ever delete any file.
 - If a file is not needed, store it in the archive folder.
