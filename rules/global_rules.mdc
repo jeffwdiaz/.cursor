@@ -9,15 +9,18 @@ alwaysApply: true
 These aliases should be recognized and executed automatically when typed in the chat. 
 - When user types:
     - `ind`:
-        - follow [cursor_ignore_rules.mdc](mdc:.cursor/rules/cursor_ignore_rules.mdc)
+        - follow @cursor_ignore_rules.mdc
         - run `tree /F /A` to index the project directory
         - read README.md
     - `upd`:
-        - read and follow the instructions in [update_docs.mdc](mdc:.cursor/rules/update_docs.mdc)
-    - `new` -> look in [new_proj.mdc](mdc:.cursor/rules/new_proj.mdc)
+        - read and follow the instructions in @update_docs.mdc
+    - `new` -> look in @new_proj.mdc
 
 ## Filetype Rules
 - When discussing Autohotkey, reference [ahk_rules.mdc](mdc:.cursor/rules/ahk_rules.mdc)
+
+## Tool Preferences
+- Always use `list_dir` instead of `file_search` when checking directory contents
 
 ## Important Principles
 - Do not ever delete any file.
@@ -155,5 +158,6 @@ try {
     });
     throw new CustomError('User message', error);
 }
+
 
 ```
