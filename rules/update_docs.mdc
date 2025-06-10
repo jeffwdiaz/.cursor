@@ -15,7 +15,8 @@ Update the following files: README.md, changelog.md, to-do.md, .gitignore, using
 
 ## Changelog File
 Do the following in order:
-- Check today's date with `date`
+- Run `date` command to get the current system date
+- Use the exact date and time from the system's `date` command output, regardless of whether it seems correct
 - Put the most recent entry at the top of the document.
 - Use `## YYYY-MM-DD - Weekday` for entry headers.
 - The same type of changes should be grouped.
