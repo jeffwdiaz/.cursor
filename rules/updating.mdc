@@ -1,0 +1,153 @@
+---
+description: Use when user types "upd"
+globs: 
+alwaysApply: false
+---
+# Document Updating Rules
+Do not ask me if I want to proceed, just do it. Do not stop until these files are all updated.
+Update the following files using the rules within this document:
+- README.md
+- CHANGELOG.md
+- .gitignore
+
+### README.md
+Readme file should include:
+- Project Overview
+    - Overview of the project. Do not update this.
+    - No more than 50 words
+- Project Goal
+    - Overview of the project goal. Do not update this.
+    - No more than 50 words
+- Tech Stack
+    - Tech stack for the whole project.
+
+Use the following structure for the README:
+```markdown
+# Project Name
+
+## Project Overview
+Brief description
+
+## Project Goal
+Brief purpose
+
+## Tech Stack
+- Frontend: [List]
+- Backend: [List]
+- Database: [List] 
+- Other: [List]
+```
+
+### CHANGELOG.md
+**Strict Formatting and Date Rules:**
+1. Always use the exact output from the date command as the entry header, including the correct year, month, day, and weekday. Do not use a hardcoded or example date.
+   - Example: If today is June 27, 2025 (Friday), the header must be:
+     `## 2025-06-27 - Friday`
+2. There should only be one `# Changelog` header at the very top of the file. Do not repeat this header for each entry.
+3. Each day's entry must include all four change types (Added, Changed, Fixed, Removed) in this order, even if some are blank.
+   - Example:
+     ```
+     ## 2025-06-27 - Friday
+     Added: 
+     Changed: 
+     Fixed: 
+     Removed: 
+     ```
+4. Do not use dashes, bullets, or lists for the change types. Each type should be a single line, starting with the type and a colon.
+5. Never use example dates in the actual changelog. Always use the current date.
+6. New entries must always be added at the top, so the most recent day is first (reverse chronological order).
+7. No extra blank lines between entries, except a single blank line between each day's entry.
+8. If nothing was done for a change type on that day, leave the line blank (e.g., 'Added: ').
+
+**How to obtain the date:**
+- On Linux/macOS Bash: `date '+%Y-%m-%d - %A'`
+- On Windows PowerShell: `Get-Date -Format 'yyyy-MM-dd - dddd'`
+- On Windows CMD: `powershell -Command "Get-Date -Format 'yyyy-MM-dd - dddd'"`
+- If you cannot obtain the date using the above commands, use any method to get the current date in the required format and use it exactly as output.
+
+**Example of correct changelog format:**
+```
+# Changelog
+
+## 2025-06-27 - Friday
+Added: 
+Changed: 
+Fixed: 
+Removed: 
+
+## 2025-06-26 - Thursday
+Added: New features
+Changed: Updates
+Fixed: Bug fixes
+Removed: Removed a file.
+```
+
+### .gitignore
+- Only add entries as needed for this specific project; do not pre-populate with generic/common ignores.
+- Group related ignores (e.g., Node dependencies, build output, OS files, environment files, tool-specific files).
+- Add clear, concise comments explaining the purpose of each entry or section.
+- Regularly review `.gitignore` to ensure no unwanted files are committed.
+- Add the following to .gitignore and make sure they stay at the top:
+- `**/archive/**`
+- `**/.env`
+
+Use the following structure for the .gitignore file:
+```
+# All .cursor folders and all files within
+**/.cursor/** 
+
+# All archive folders and all files within
+**/archive/**
+
+# All environment variables
+**/.env
+```
+
+### PROJECT_STRUCTURE.md
+- Always begin by running `tree /F /A` at the project root to obtain the current directory and file structure.
+- Use the output of `tree /F /A` to verify and update the directory tree section in PROJECT_STRUCTURE.md.
+- Update PROJECT_STRUCTURE.md whenever you add, remove, rename, or move a folder or significant file in the project.
+- Keep all folder and file descriptions accurate and up to date.
+- Clearly note if a folder is a submodule, external dependency, or has a special role.
+- Remove or update entries for deleted or archived folders/files.
+- Maintain consistent Markdown formatting and style throughout the document.
+- Ensure the directory tree and descriptions match the actual project structure.
+- After major reorganizations or refactors, review the entire document for accuracy.
+- Commit changes to PROJECT_STRUCTURE.md alongside the relevant structural changes in the codebase.
+- Write descriptions with enough detail for new contributors to understand the structure.
+
+Use the following structure for the PROJECT_STRUCTURE.md file:
+```
+# Project Structure
+
+## Directory Structure
+
+```
+. (project root)
+|   .gitignore
+|   CHANGELOG.md
+|   main.ahk
+|   PROJECT_STRUCTURE.md
+|   README.md
+|
++---active
+|   +---games
+|   +---images
+|   +---lib
+|   +---resources
++---ahkdocs
+|   +---docs
++---archive
+```
+
+## Folder & File Descriptions
+
+- **active/**: Main working directory for scripts and resources (games, images, libraries, resources).
+- **ahkdocs/**: Project documentation (docs subfolder).
+- **archive/**: Archived and backup files.
+- **main.ahk**: Main AutoHotkey script.
+- **README.md**: Project overview and instructions.
+- **CHANGELOG.md**: Project changelog.
+- **.gitignore**: Git ignore rules for the project.
+- **PROJECT_STRUCTURE.md**: This file; describes the project structure.
+

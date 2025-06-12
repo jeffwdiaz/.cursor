@@ -1,5 +1,5 @@
 ---
-description: This rule should be used when setting up new projects
+description: 
 globs: 
 alwaysApply: false
 ---

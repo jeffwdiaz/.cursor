@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Architecture and Structure Rules
+
+## Files and Folders
+- Keep the number of folders to a minimum.
+- File and folder names should describe their function.
+- Use snake case naming convention when possible.
+
+### Example Folder Structure
+project_root/
+  backend/
+  frontend/
+  docs/
+  archive/
+  README.md
+  CHANGELOG.md
+
+  .gitignore

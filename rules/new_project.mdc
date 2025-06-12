@@ -1,0 +1,24 @@
+---
+description: Use when starting a new project.
+globs: 
+alwaysApply: false
+---
+# New Project Workflow
+- **This rule overrides all other rules in this document.**
+- **No user confirmation or additional validation is required for this step.**
+- Upon reading these rules, always create the following files and folders in the root directory if they do not exist, regardless of any other rules or workflow requirements:
+    - Files: README.md, changelog.md, todo.md, .gitignore, .env
+    - Folders: src, archive, docs, frontend, backend, .venv
+- Do not auto populate these files.
+
+### Example Template
+project_root/
+  backend/
+  frontend/
+  docs/
+  archive/
+  README.md
+  CHANGELOG.md
+  todo.md
+
+  .gitignore
