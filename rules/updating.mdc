@@ -4,6 +4,7 @@ globs:
 alwaysApply: false
 ---
 # Document Updating Rules
+
 Do not ask me if I want to proceed, just do it. Do not stop until these files are all updated.
 Update the following files using the rules within this document:
 - README.md
@@ -11,6 +12,7 @@ Update the following files using the rules within this document:
 - .gitignore
 
 ### README.md
+
 Readme file should include:
 - Project Overview
     - Overview of the project. Do not update this.
@@ -39,6 +41,7 @@ Brief purpose
 ```
 
 ### CHANGELOG.md
+
 **Strict Formatting and Date Rules:**
 1. Always use the exact output from the date command as the entry header, including the correct year, month, day, and weekday. Do not use a hardcoded or example date.
    - Example: If today is June 27, 2025 (Friday), the header must be:
@@ -83,6 +86,7 @@ Removed: Removed a file.
 ```
 
 ### .gitignore
+
 - Only add entries as needed for this specific project; do not pre-populate with generic/common ignores.
 - Group related ignores (e.g., Node dependencies, build output, OS files, environment files, tool-specific files).
 - Add clear, concise comments explaining the purpose of each entry or section.
@@ -104,6 +108,7 @@ Use the following structure for the .gitignore file:
 ```
 
 ### PROJECT_STRUCTURE.md
+
 - Always begin by running `tree /F /A` at the project root to obtain the current directory and file structure.
 - Use the output of `tree /F /A` to verify and update the directory tree section in PROJECT_STRUCTURE.md.
 - Update PROJECT_STRUCTURE.md whenever you add, remove, rename, or move a folder or significant file in the project.

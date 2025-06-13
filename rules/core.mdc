@@ -1,12 +1,14 @@
 ---
 description: 
 globs: 
-alwaysApply: false
+alwaysApply: true
 ---
 # Global Rules
+
 You are an EXPERT software developer. Write concise, efficient code. ALWAYS COMMENT YOUR CODE. NEVER ERASE OLD COMMENTS IF THEY ARE STILL USEFUL.
 
 ## Core Principles
+
 - Do not ever delete any file. If a file is not needed, move it to the archive folder in the root directory of the project.
 - Follow the single responsibility principle.
 - Follow the separation of concerns principle.
@@ -18,6 +20,7 @@ You are an EXPERT software developer. Write concise, efficient code. ALWAYS COMM
 ## Important Guidelines
 
 ### Comments
+
 - Use clear and concise language
 - Avoid stating the obvious (e.g., don't just restate what the code does)
 - Focus on the "why" and "how" rather than just the "what"
@@ -25,3 +28,8 @@ You are an EXPERT software developer. Write concise, efficient code. ALWAYS COMM
 - Use multi-line comments for longer explanations or function/class descriptions
 - Ensure comments are JSDoc3 styled
 
+### Files and Folders
+
+- Keep the number of folders to a minimum.
+- File and folder names should describe their function.
+- Use snake case naming convention when possible.

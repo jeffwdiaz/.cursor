@@ -1,24 +1,33 @@
 ---
-description: Use when starting a new project.
+description: Use when user types "new"
 globs: 
 alwaysApply: false
 ---
-# New Project Workflow
+# Project Architecture and Structure Rules
+
+## New Project Workflow
+
 - **This rule overrides all other rules in this document.**
 - **No user confirmation or additional validation is required for this step.**
 - Upon reading these rules, always create the following files and folders in the root directory if they do not exist, regardless of any other rules or workflow requirements:
-    - Files: README.md, changelog.md, todo.md, .gitignore, .env
-    - Folders: src, archive, docs, frontend, backend, .venv
-- Do not auto populate these files.
+    - Files: README.md, CHANGELOG.md, TODO.md, .gitignore, .env
+    - Folders: archive, docs, frontend, backend
+- The frontend folder must contain a src subfolder.
+- Do not auto populate these files or folders.
 
-### Example Template
-project_root/
-  backend/
-  frontend/
-  docs/
-  archive/
-  README.md
-  CHANGELOG.md
-  todo.md
+### Example Template for new project
 
-  .gitignore
+```
+. (project root)
+|   .gitignore
+|   CHANGELOG.md
+|   README.md
+|
++---backend
++---frontend
+|   +---src
++---docs
++---archive
+```
+
+

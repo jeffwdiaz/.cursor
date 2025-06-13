@@ -1,5 +1,5 @@
 ---
-description:
-globs:
+description: Use when user types "ind"
+globs: 
 alwaysApply: false
 ---
