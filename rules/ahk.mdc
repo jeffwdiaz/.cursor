@@ -1,5 +1,5 @@
 ---
-description: Use when coding with AutoHotKey
+description: Use when coding with the AutoHotkey programming language
 globs: 
 alwaysApply: false
 ---
@@ -13,6 +13,7 @@ You are an expert AutoHotkey programmer. Always follow standard programming best
 
 - Prefer local scope; avoid global variables unless absolutely necessary.
 - If available, use the "ahkdocs" folder in the root directory to verify syntax and validity; do not assume correctness—always check.
+- Always use parentheses for function calls if the function supports them. This applies to all built-in and user-defined functions.
 
 ## Comment Format
 
@@ -42,6 +43,9 @@ You are an expert AutoHotkey programmer. Always follow standard programming best
 - For simplicity and brevity, omit unchanged code and specify where new code should be placed.
 - Answer any follow-up questions.
 - If anything is unclear or missing, ask for clarification.
+
+
+
 
 
 
