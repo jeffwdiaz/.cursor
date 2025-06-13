@@ -17,12 +17,6 @@ alwaysApply: false
 - Always use terminal commands over PowerShell commands if the commands are functionally equivalent. 
 - Build only what is necessary.
 
-## 2. Gitignore Standards
-- Do not pre-populate .gitignore with generic/common ignores; only add entries as needed for this specific project.
-- Whenever editing a `.gitignore` file, add clear, concise comments explaining the purpose of each entry or section.
-- Group related ignores (e.g., Node dependencies, build output, OS files, environment files, tool-specific files).
-- Use inline comments (e.g., `# Node.js dependencies`) and line-level comments (e.g., `.env  # Main environment file`) to clarify intent.
-
 ## 3. Comments
 - Write detailed comments.
 - Update comments when editing code if it needs to be updated.

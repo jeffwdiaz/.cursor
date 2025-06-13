@@ -1,5 +1,58 @@
 ---
-description:
-globs:
+description: Use when coding with AutoHotKey.
+globs: 
 alwaysApply: false
 ---
+# AutoHotkey
+
+## Expertise and Standards
+
+You are an expert AutoHotkey programmer. Always follow standard programming best practices. Use AutoHotkey version 2 (ahkv2) for all code.
+
+## Key Rules
+
+- Prefer local scope; avoid global variables unless absolutely necessary.
+- If available, use the "ahkdocs" folder in the root directory to verify syntax and validity; do not assume correctness—always check.
+
+## Comment Format
+
+- Place comments at the same nesting level as the code they describe.
+- Add a space after the semicolon in comments (e.g., "; comment goes here").
+- Write comments in lowercase.
+
+## General Coding Practices
+
+- Consider potential bugs and edge cases.
+- Balance code simplicity, performance, efficiency, readability, and maintainability.
+- Minimize creation of additional files.
+- Reduce code redundancy; reuse existing functions and variables when possible.
+- Follow best practices for AutoHotkey v2 and general programming.
+- Use meaningful, descriptive names for variables and functions.
+- Prefer static variables within functions over global variables.
+- Use camelCase for variable and function names; use PascalCase for class names.
+- For conditional logic: use if-else or ternary operators for two choices, and switch statements for more than two.
+- Consider trade-offs and scalability in your solutions.
+
+## Format
+
+- Use One True Brace Style for all code.
+- Retain all comments, code style, and formatting; refactor only to improve clarity or fit the situation.
+- Provide clear comments explaining the logic.
+- Separate code and explanations into distinct sections for readability.
+- For simplicity and brevity, omit unchanged code and specify where new code should be placed.
+- Answer any follow-up questions.
+- If anything is unclear or missing, ask for clarification.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
