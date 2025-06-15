@@ -1,5 +1,5 @@
 ---
-description: 
+description: Use when writing comments
 globs: 
 alwaysApply: false
 ---
@@ -122,7 +122,7 @@ betterFind(option := "find") {
 
 ```css
 /* Colors
-   ------------------------------> */
+   ---------------------------------------------------------------------- */
 
 :root {
     --color-primary: #2566eb;
@@ -131,7 +131,7 @@ betterFind(option := "find") {
 }
 
 /* Typography
-   ------------------------------> */
+   ---------------------------------------------------------------------- */
 ```
 
 ### Property Explanations
@@ -172,8 +172,16 @@ betterFind(option := "find") {
 
 ### TODO/FIXME Comments
 ```css
-/* TODO: Refactor this to use CSS Grid when browser support improves */
-/* FIXME: This causes layout shift on mobile devices */
+/* ----------------------------------------------------------------------
+TODO: Don't forget to change this!
+---------------------------------------------------------------------- /*
+.body {
+    display: flex;
+}
+
+/* ----------------------------------------------------------------------
+FIXME: This causes layout shift on mobile devices
+---------------------------------------------------------------------- */
 .element {
     display: flex;
 }
@@ -188,8 +196,9 @@ betterFind(option := "find") {
 """
 Data Processing Module
 
-This module provides functions for processing and analyzing data from various sources.
-It includes utilities for data cleaning, transformation, and basic statistical analysis.
+This module provides functions for processing and analyzing data from 
+various sources. It includes utilities for data cleaning, 
+transformation, and basic statistical analysis.
 
 Author: John Doe
 Date: 2024-03-20
@@ -205,10 +214,12 @@ def process_data(data: list, threshold: float = 0.5) -> dict:
     
     Args:
         data (list): List of data points to process
-        threshold (float, optional): Minimum value threshold. Defaults to 0.5.
+        threshold (float, optional): Minimum value threshold. 
+            Defaults to 0.5.
     
     Returns:
-        dict: Processed results containing statistics and filtered data
+        dict: Processed results containing statistics and filtered 
+            data
     
     Raises:
         ValueError: If data is empty or threshold is negative
@@ -222,9 +233,9 @@ class DataProcessor:
     """
     A class for processing and analyzing data sets.
     
-    This class provides methods for data cleaning, transformation,
-    and statistical analysis. It supports various data formats
-    and includes validation checks.
+    This class provides methods for data cleaning, transformation, and 
+    statistical analysis. It supports various data formats and includes 
+    validation checks.
     
     Attributes:
         data (list): The processed data set
@@ -246,9 +257,12 @@ class DataProcessor:
 ```python
 # Initialize the data structure with default values
 data = {
-    'count': 0,  # Tracks total number of items
-    'sum': 0,    # Running sum for average calculation
-    'items': []  # List to store processed items
+    # Tracks total number of items
+    'count': 0,
+    # Running sum for average calculation
+    'sum': 0,
+    # List to store processed items
+    'items': []
 }
 
 # Process each item in the input list
@@ -271,8 +285,10 @@ from typing import List, Dict, Optional, Union
 DataPoint = Union[int, float]
 
 def analyze_data(
-    values: List[DataPoint],  # List of numeric values to analyze
-    options: Optional[Dict[str, bool]] = None  # Optional configuration
+    # List of numeric values to analyze
+    values: List[DataPoint],
+    # Optional configuration
+    options: Optional[Dict[str, bool]] = None
 ) -> Dict[str, float]:
     """
     Analyze a list of numeric values and return statistics.
@@ -308,10 +324,8 @@ def analyze_data(
 - [ ] Comments follow the language-specific style guide
 - [ ] All public APIs and interfaces are documented
 - [ ] Complex logic is explained with clear comments
-- [ ] No commented-out code remains in the file
 - [ ] Comments are up-to-date with the code
 - [ ] Documentation includes examples where helpful
 - [ ] Edge cases and assumptions are documented
-- [ ] TODO/FIXME comments include ticket numbers
 - [ ] Comments are concise and add value
 - [ ] No redundant or obvious comments
