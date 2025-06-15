@@ -1,0 +1,162 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Commenting Guidelines
+
+## Overview
+This document provides commenting standards and examples for multiple programming languages to help maintain clean, readable, and well-documented code.
+
+## General Principles
+- **Purpose**: Comments should explain the "why" and "how", not just the "what"
+- **Clarity**: Use clear, concise language
+- **Relevance**: Keep comments up-to-date with code changes
+
+---
+
+## AutoHotkey (.ahk)
+Do not use inline comments.
+
+### Single-line Comments
+```autohotkey
+; ---> comment goes here
+```
+
+### Multi-line Comments
+```autohotkey
+; ---> multi-line comment
+; ---> second line of a multi-line comment
+; ---> third line of a multi-line comment and so on
+```
+
+### Function Documentation
+```autohotkey
+/**
+ * Enhanced file search function with clipboard integration and timing controls
+ * 
+ * This function provides improved search functionality that can operate in two modes:
+ * - "find": Opens find dialog and pastes clipboard content with auto-repeat
+ * - "extension": Opens address bar and handles URL/extension input with timing
+ * 
+ * @param {String} option - Search mode: "find" (default) or "extension"
+ * @returns {Void} - No return value, performs UI actions directly
+ * 
+ * @example
+ * ; Basic find with clipboard paste
+ * betterFind()
+ * 
+ * ; Extension mode for browser address bar
+ * betterFind("extension")
+ * 
+ * @dependencies
+ * - Requires clipboard content for "find" mode
+ * - Assumes browser context for "extension" mode
+ * 
+ * @behavior
+ * - Hold hotkey >200ms in find mode: auto-repeats Enter key
+ * - Hold hotkey >100ms in extension mode: types "https" instead of clipboard
+ * 
+ * @author YourName
+ * @version 1.2
+ * @since 2024-01-15
+ */
+```
+
+---
+
+## HTML (.html)
+
+### Document Structure Comments
+```html
+<!-- [Example needed] -->
+```
+
+### Section Comments
+```html
+<!-- [Example needed] -->
+```
+
+### Conditional Comments
+```html
+<!-- [Example needed] -->
+```
+
+---
+
+## CSS (.css)
+
+### Section Headers
+```css
+/* [Example needed] */
+```
+
+### Property Explanations
+```css
+/* [Example needed] */
+```
+
+### Media Query Comments
+```css
+/* [Example needed] */
+```
+
+### TODO/FIXME Comments
+```css
+/* [Example needed] */
+```
+
+---
+
+## Python (.py)
+
+### Module/File Headers
+```python
+"""
+[Example needed]
+"""
+```
+
+### Function Docstrings
+```python
+def example_function():
+    """
+    [Example needed]
+    """
+    pass
+```
+
+### Class Docstrings
+```python
+class ExampleClass:
+    """
+    [Example needed]
+    """
+    pass
+```
+
+### Inline Comments
+```python
+# [Example needed]
+```
+
+### Type Hints with Comments
+```python
+# [Example needed]
+```
+
+---
+
+## Best Practices Summary
+
+### DO:
+- [Add specific guidelines here]
+
+### DON'T:
+- [Add specific anti-patterns here]
+
+### Code Review Checklist:
+
+
+
+- [ ] [Add checklist items here]
