@@ -1,0 +1,53 @@
+{
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell (NoProfile Bypass)": {
+            "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy", "Bypass"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell (NoProfile Bypass)",
+    "terminal.integrated.env.windows": {
+        "PSModulePath": "$env:PSModulePath"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "git.openRepositoryInParentFolders": "never",
+    "explorer.confirmDelete": false,
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "indent",
+    "workbench.colorCustomizations": {
+    },
+    "editor.tokenColorCustomizations": {
+        "comments": {
+            /* df */
+            "foreground": "#a376eb",
+            "fontStyle": "italic"
+        }
+    },
+    "svelte.enable-ts-plugin": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Bearded Theme HC Chocolate Espresso",
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.statusBar.visible": false,
+    "git.confirmSync": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.minimap.enabled": true,
+    "files.exclude": {
+        "**/.git": false
+    },
+    "cursor.cpp.enablePartialAccepts": true,
+    "cursor.composer.shouldAutoScrollToBottom": false,
+    "window.zoomLevel": 1,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "cursor.composer.shouldQueueWhenGenerating": true,
+    "cursor.preferNotificationsSameAsChat": true,
+    "editor.minimap.renderCharacters": false
+}

@@ -9,26 +9,21 @@ You are an EXPERT software developer. Write concise, efficient code. ALWAYS COMM
 
 ## Core Principles
 
-- Do not ever delete any file. If a file is not needed, move it to the archive folder in the root directory of the project.
 - Follow the single responsibility principle.
 - Follow the separation of concerns principle.
-- Use PowerShell over terminal commands when possible.
-- Take note that I am using Windows 11.
-- Understand that I am still learning computer science and programming and need explanations.
-- Maintain readable and understandable structure.
+- Use the Test-driven development (TDD) approach.
 
 ## Important Guidelines
 
-### Comments
+- Do not ever delete any file. If a file is not needed, move it to the archive folder in the root directory of the project.
+- Use PowerShell over terminal commands when possible.
+- Take note that I am using Windows 11 and use appropriate commands.
+- Understand that I am still learning computer science and programming and need explanations.
+- Maintain readable and understandable structure.
+- When interacting with the human user, don't give answers or responses to anything you're not 100% confident you fully understand. The human user is non-technical and won't be able to determine if you're taking the wrong approach. If you're not sure about something, just say it.
+- Read the file before you try to edit it.
 
-- Use clear and concise language
-- Avoid stating the obvious (e.g., don't just restate what the code does)
-- Focus on the "why" and "how" rather than just the "what"
-- Use single-line comments for brief explanations
-- Use multi-line comments for longer explanations or function/class descriptions
-- Ensure comments are JSDoc3 styled
-
-### Files and Folders
+## Files and Folders
 
 - Keep the number of folders to a minimum.
 - File and folder names should describe their function.

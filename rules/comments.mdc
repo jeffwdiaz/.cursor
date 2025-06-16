@@ -5,8 +5,13 @@ alwaysApply: false
 ---
 # Commenting Guidelines
 
-- Limit comments to 72 characters per line. Use multi-line comments if more space is needed.
+- Use clear and concise language
+- Avoid stating the obvious (e.g., don't just restate what the code does)
+- Focus on the "why" and "how" rather than just the "what"
 - Do not use inline comments.
+- Use single-line comments for brief explanations
+- Use multi-line comments for longer explanations or function/class descriptions
+- Limit comments to 72 characters per line. Use multi-line comments if more space is needed.
 
 ## AutoHotkey (.ahk)
 
