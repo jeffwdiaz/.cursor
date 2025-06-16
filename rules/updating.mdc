@@ -44,7 +44,7 @@ Brief purpose
 
 ### CHANGELOG.md
 
-**Strict Formatting and Date Rules:**
+Strict Formatting and Date Rules:
 1. Always use the exact output from the date command as the entry header, including the correct year, month, day, and weekday. Do not use a hardcoded or example date.
    - Example: If today is June 27, 2025 (Friday), the header must be:
      `## 2025-06-27 - Friday`
@@ -53,10 +53,10 @@ Brief purpose
    - Example:
      ```
      ## 2025-06-27 - Friday
-     Added: 
-     Changed: 
-     Fixed: 
-     Removed: 
+     ### Added 
+     ### Changed
+     ### Fixed
+     ### Removed
      ```
 4. Do not use dashes, bullets, or lists for the change types. Each type should be a single line, starting with the type and a colon.
 5. Never use example dates in the actual changelog. Always use the current date.
@@ -64,27 +64,55 @@ Brief purpose
 7. No extra blank lines between entries, except a single blank line between each day's entry.
 8. If nothing was done for a change type on that day, leave the line blank (e.g., 'Added: ').
 
-**How to obtain the date:**
-- On Linux/macOS Bash: `date '+%Y-%m-%d - %A'`
-- On Windows PowerShell: `Get-Date -Format 'yyyy-MM-dd - dddd'`
-- On Windows CMD: `powershell -Command "Get-Date -Format 'yyyy-MM-dd - dddd'"`
-- If you cannot obtain the date using the above commands, use any method to get the current date in the required format and use it exactly as output.
+#### How to obtain the date:
 
-**Example of correct changelog format:**
+Step 1: Run the date command
+- Windows PowerShell (Primary): `(Get-Date).ToString("yyyy-MM-dd - dddd")`
+- Windows PowerShell (Alternative): `Get-Date -Format "yyyy-MM-dd - dddd"`
+- Linux/macOS: `date '+%Y-%m-%d - %A'`
+
+Step 2: Extract the date from terminal output
+- Look for a line that matches the pattern: `YYYY-MM-DD - DayName`
+- Example: If you see `2025-06-15 - Sunday` in the output, use exactly that
+- Ignore any command text, line breaks, or extra formatting around the date
+- The date line should be the actual result, not the command itself
+
+Step 3: Validate the extracted date
+- Verify the format is exactly: `YYYY-MM-DD - DayName`
+- Verify it's a real date (not an example from these instructions)
+- If the date looks wrong or corrupted, re-run the command
+
+Step 4: Use the exact extracted date
+- Use the EXACT text from the terminal output
+- Do NOT modify, assume, or substitute any part of the date
+- Do NOT use hardcoded dates or dates from these instruction examples
+
+Troubleshooting:
+- If terminal output is messy: Re-run the command until you get clean output
+- If command fails: Try the alternative PowerShell command
+- If still having issues: Run the command multiple times and use the clearest result
+
+#### Example of correct changelog format:
+
 ```
 # Changelog
 
 ## 2025-06-27 - Friday
-Added: 
-Changed: 
-Fixed: 
-Removed: 
+### Added
+### Changed
+### Fixed
+### Removed
 
 ## 2025-06-26 - Thursday
-Added: New features
-Changed: Updates
-Fixed: Bug fixes
-Removed: Removed a file.
+### Added
+- New features
+- Another new feature
+### Changed
+- Updates
+### Fixed
+- Bug Fixes
+### Removed
+- Removed file.txt
 ```
 
 ### .gitignore
@@ -94,8 +122,10 @@ Removed: Removed a file.
 - Add clear, concise comments explaining the purpose of each entry or section.
 - Regularly review `.gitignore` to ensure no unwanted files are committed.
 - Add the following to .gitignore and make sure they stay at the top:
+- `**/.cursor/**`
 - `**/archive/**`
 - `**/.env`
+- Only add files below the `# <--- AI Content Boundary` line
 
 Use the following structure for the .gitignore file:
 ```
@@ -105,8 +135,12 @@ Use the following structure for the .gitignore file:
 # All archive folders and all files within
 **/archive/**
 
-# All environment variables
+# All environment variable files
 **/.env
+**/.env.*
+
+# <--- AI Content Boundary
+# <--- AI model has written all content below this line
 ```
 
 ### PROJECT_MAP.md
