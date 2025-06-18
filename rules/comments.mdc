@@ -17,7 +17,13 @@ alwaysApply: false
 
 The guidelines within this header are for the autohotkey language.
 
-### Single-line Comments
+### Brief Comments
+
+- A brief comment is one line of commenting on the code and one line of a separator below the comment line.
+- Use for short explanations (one line of comment text)
+- Add a separator below the comment line that consists of a semi-colon, followed by a space, and followed by 70 dashes.
+- You will see only 4 dashes in the example but make sure to add 70 not 4.
+- See example below
 
 ```autohotkey
 ; This is a single comment and it does not exceed 72 characters.
@@ -25,6 +31,9 @@ The guidelines within this header are for the autohotkey language.
 ```
 
 ### Multi-line Comments
+
+- Multi-line comments should have a separator above and below the comment block.
+- A multi-line comment is any line that is longer than two lines.
 
 ```autohotkey
 ; ----------------------------------------------------------------------
@@ -35,6 +44,8 @@ The guidelines within this header are for the autohotkey language.
 ```
 
 ### Function Documentation
+
+- Function documentation comments should have a separator above and below the comment block.
 
 ```autohotkey
 ; ----------------------------------------------------------------------
