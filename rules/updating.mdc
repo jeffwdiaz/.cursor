@@ -6,10 +6,12 @@ alwaysApply: false
 
 # Document Updating Rules
 
-Do not ask me if I want to proceed, just do it. Do not stop until these files are all updated.
+- Do not ask me if I want to proceed, just do it. Do not stop until these files are all updated.
 Update the following files using the rules within this document:
 
-**IMPORTANT EXCLUSION RULE**: When updating any of these files, completely ignore the `.cursor` folder and `.archive` folder and all their contents. The `.cursor` folder contains IDE-specific configuration, rules, and settings, while the `.archive` folder contains archived/backup files. Neither folder is part of the actual project functionality and should never be documented in project files, changelogs, or specifications.
+- Don't use italics or bold formatting.
+
+- IMPORTANT EXCLUSION RULE: When updating any of these files, completely ignore the `.cursor` folder and `.archive` folder and all their contents. The `.cursor` folder contains IDE-specific configuration, rules, and settings, while the `.archive` folder contains archived/backup files. Neither folder is part of the actual project functionality and should never be documented in project files, changelogs, or specifications.
 
 - README.md
 - CHANGELOG.md

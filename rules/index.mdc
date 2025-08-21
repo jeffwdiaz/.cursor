@@ -1,27 +1,35 @@
 ---
 description: Use when user types "ind"
-globs: 
+globs:
 alwaysApply: false
 ---
+
 # Codebase Indexing Rule
 
 ## Purpose
+
 When triggered, review key project documentation files to understand the project structure, goals, and recent changes before proceeding with any coding tasks.
 
 ## Required Files to Review
+
 Always review these files in order to understand the project context:
 
 1. **PROJECT_MAP.md** - Learn the project organization, folder structure, and file descriptions
 2. **README.md** - Understand the project overview, goals, and tech stack
 3. **CHANGELOG.md** - Review recent changes and project evolution
+4. **SPEC.md** - Learn about the project
+5. **TODO.md** - Know what to work on next
 
 ## Process
+
 1. Read PROJECT_MAP.md to understand:
+
    - Directory structure and organization
    - Purpose of each folder and key files
    - Project architecture and layout
 
 2. Read README.md to understand:
+
    - Project overview and description
    - Project goals and objectives
    - Tech stack and dependencies
@@ -33,14 +41,8 @@ Always review these files in order to understand the project context:
    - Current development focus
 
 ## When to Use
+
 - At the start of any new coding session
 - When asked to work on unfamiliar parts of the codebase
 - Before making significant changes to the project structure
 - When the user types "ind" to trigger indexing
-
-
-
-
-
-
-
