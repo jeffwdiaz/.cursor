@@ -1,28 +1,33 @@
 ---
 description: Use when user types "upd"
-globs: 
+globs:
 alwaysApply: false
 ---
+
 # Document Updating Rules
 
 Do not ask me if I want to proceed, just do it. Do not stop until these files are all updated.
 Update the following files using the rules within this document:
+
+**IMPORTANT EXCLUSION RULE**: When updating any of these files, completely ignore the `.cursor` folder and `.archive` folder and all their contents. The `.cursor` folder contains IDE-specific configuration, rules, and settings, while the `.archive` folder contains archived/backup files. Neither folder is part of the actual project functionality and should never be documented in project files, changelogs, or specifications.
+
 - README.md
 - CHANGELOG.md
 - PROJECT_MAP.md
 - .gitignore
+- SPEC.md
+- TODO.md
 
 ### README.md
 
 Readme file should include:
+
 - Project Overview
-    - Overview of the project. Only update the project overview if necessary.
-    - No more than 50 words
+  - Overview of the project. Only update the project overview if necessary.
+  - No more than 50 words
 - Project Goal
-    - Project goal. Only update the project goal if necessary.
-    - No more than 50 words
-- Tech Stack
-    - Tech stack for the whole project. Fill in sections for Frontend, Backend, Database, and Other if they apply. Do not fill them in if they do not apply.
+  - Project goal. Only update the project goal if necessary.
+  - No more than 50 words
 
 Use the following structure for the README:
 
@@ -30,21 +35,18 @@ Use the following structure for the README:
 # Project Name
 
 ## Project Overview
+
 Brief description
 
 ## Project Goal
-Brief purpose
 
-## Tech Stack
-- Frontend: [List]
-- Backend: [List]
-- Database: [List] 
-- Other: [List]
+Brief purpose
 ```
 
 ### CHANGELOG.md
 
 Strict Formatting and Date Rules:
+
 1. Always use the exact output from the date command as the entry header, including the correct year, month, day, and weekday. Do not use a hardcoded or example date.
    - Example: If today is June 27, 2025 (Friday), the header must be:
      `## 2025-06-27 - Friday`
@@ -53,7 +55,7 @@ Strict Formatting and Date Rules:
    - Example:
      ```
      ## 2025-06-27 - Friday
-     ### Added 
+     ### Added
      ### Changed
      ### Fixed
      ### Removed
@@ -67,27 +69,32 @@ Strict Formatting and Date Rules:
 #### How to obtain the date:
 
 Step 1: Run the date command
+
 - Windows PowerShell (Primary): `(Get-Date).ToString("yyyy-MM-dd - dddd")`
 - Windows PowerShell (Alternative): `Get-Date -Format "yyyy-MM-dd - dddd"`
 - Linux/macOS: `date '+%Y-%m-%d - %A'`
 
 Step 2: Extract the date from terminal output
+
 - Look for a line that matches the pattern: `YYYY-MM-DD - DayName`
 - Example: If you see `2025-06-15 - Sunday` in the output, use exactly that
 - Ignore any command text, line breaks, or extra formatting around the date
 - The date line should be the actual result, not the command itself
 
 Step 3: Validate the extracted date
+
 - Verify the format is exactly: `YYYY-MM-DD - DayName`
 - Verify it's a real date (not an example from these instructions)
 - If the date looks wrong or corrupted, re-run the command
 
 Step 4: Use the exact extracted date
+
 - Use the EXACT text from the terminal output
 - Do NOT modify, assume, or substitute any part of the date
 - Do NOT use hardcoded dates or dates from these instruction examples
 
 Troubleshooting:
+
 - If terminal output is messy: Re-run the command until you get clean output
 - If command fails: Try the alternative PowerShell command
 - If still having issues: Run the command multiple times and use the clearest result
@@ -128,9 +135,10 @@ Troubleshooting:
 - Only add files below the `# <--- AI Content Boundary` line
 
 Use the following structure for the .gitignore file:
+
 ```
 # All .cursor folders and all files within
-**/.cursor/** 
+**/.cursor/**
 
 # All archive folders and all files within
 **/archive/**
@@ -158,6 +166,7 @@ Use the following structure for the .gitignore file:
 - Write descriptions with enough detail for new contributors to understand the structure.
 
 Use the following structure for the PROJECT_MAP.md file:
+
 ```
 # Project Map
 
@@ -176,6 +185,86 @@ Use the following structure for the PROJECT_MAP.md file:
 +---archive
 ```
 
+### SPEC.md
+
+- Technical specification document that outlines the complete project requirements and architecture.
+- Only update if there are significant changes to project scope, requirements, or technical architecture.
+- Maintain consistency with the implementation phases and technical stack decisions.
+- Keep the file structure and formatting consistent with the original specification format.
+
+Use the following structure for the SPEC.md file:
+
+```
+# Project Name - Technical Specification
+
+## Project Overview
+
+Brief description of the project
+
+## Technical Stack
+
+- Language and framework details
+- Core libraries and dependencies
+- Target platform information
+
+## Functional Requirements
+
+- Core functionality requirements
+- User interface requirements
+- Integration requirements
+
+## Technical Architecture
+
+- Application structure
+- Data models
+- Implementation phases
+
+## Success Criteria
+
+- Performance targets
+- Quality metrics
+- Testing requirements
+```
+
+### TODO.md
+
+- Development to-do list organized by implementation phases.
+- Update task completion status by checking off completed items.
+- Add new tasks as they are identified during development.
+- Maintain the phase-based organization structure.
+- Update progress notes and priorities as needed.
+
+Use the following structure for the TODO.md file:
+
+```
+# Project Name - Development To-Do List
+
+## Phase 1: [Project-Specific Phase Name]
+
+- [ ] Task description
+- [ ] Another task description
+
+## Phase 2: [Project-Specific Phase Name]
+
+- [ ] Core feature task
+- [ ] Additional core task
+
+## Technical Infrastructure
+
+- [ ] Setup task
+- [ ] Configuration task
+
+## Testing & Quality Assurance
+
+- [ ] Testing task
+- [ ] Quality task
+
+## Notes
+
+- Important development notes
+- Priority guidelines
+```
+
 ## Folder & File Descriptions
 
 - **src/**: Main source code directory.
@@ -187,4 +276,5 @@ Use the following structure for the PROJECT_MAP.md file:
 - **CHANGELOG.md**: Project changelog.
 - **.gitignore**: Git ignore rules for the project.
 - **PROJECT_MAP.md**: This file; describes the project structure.
-
+- **SPEC.md**: Technical specification document outlining project requirements, architecture, and implementation phases.
+- **TODO.md**: Development to-do list organized by implementation phases with checkboxes for tracking progress.
