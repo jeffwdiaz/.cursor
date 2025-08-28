@@ -53,28 +53,27 @@ Strict Formatting and Date Rules:
    - Example: If today is June 27, 2025 (Friday), the header must be:
      `## 2025-06-27 - Friday`
 2. There should only be one `# Changelog` header at the very top of the file. Do not repeat this header for each entry.
-3. Each day's entry must include all four change types (Added, Changed, Fixed, Removed) in this order, even if some are blank.
 
-   - Example:
+3. Use `[Added]`, `[Changed]`, `[Fixed]`, `[Removed]` format with square brackets. Each section can have multiple bullet points describing the changes.
 
-     ```
-     ## 2025-06-27 - Friday
+4. **IMPORTANT FORMATTING RULE**: To prevent auto-formatting issues, add blank lines before and after each section header:
 
-     [Added]
-     - description of something that was added
-     [Changed]
-     - description of something that was changed
-     [Fixed]
-     - description of something that was fixed
-     [Removed]
-     - description of something that was removed
-     ```
+   - Blank line before `[Added]`
+   - Blank line after `[Added]`
+   - Blank line before `[Changed]`
+   - Blank line after `[Changed]`
+   - Blank line before `[Fixed]`
+   - Blank line after `[Fixed]`
+   - Blank line before `[Removed]`
+   - Blank line after `[Removed]`
 
-4. Use `[Added]`, `[Changed]`, `[Fixed]`, `[Removed]` format with square brackets. Each section can have multiple bullet points describing the changes.
 5. Never use example dates in the actual changelog. Always use the current date.
+
 6. New entries must always be added at the top, so the most recent day is first (reverse chronological order).
+
 7. No extra blank lines between entries, except a single blank line between each day's entry.
-8. If nothing was done for a change type on that day, leave the line blank (e.g., '[Added]' with no bullet points below).
+
+8. If nothing was done for a change type on that day, omit that section entirely (don't include `[Added]`, `[Changed]`, etc. if there's nothing to report).
 
 #### How to obtain the date:
 
@@ -117,20 +116,30 @@ Troubleshooting:
 ## 2025-06-27 - Friday
 
 [Added]
+
 - New features
 - Another new feature
+
 [Changed]
+
 - Updates
+
 [Fixed]
+
 - Bug Fixes
+
 [Removed]
+
 - Removed file.txt
 
 ## 2025-06-26 - Thursday
 
 [Added]
+
 [Changed]
+
 [Fixed]
+
 [Removed]
 ```
 
@@ -283,7 +292,6 @@ Use the following structure for the TODO.md file:
   - **components/**: Reusable components or modules.
   - **utils/**: Utility functions and helpers.
 - **docs/**: Project documentation.
-- **archive/**: Archived and backup files.
 - **README.md**: Project overview and instructions.
 - **CHANGELOG.md**: Project changelog.
 - **.gitignore**: Git ignore rules for the project.
