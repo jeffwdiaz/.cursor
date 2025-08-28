@@ -10,6 +10,8 @@ alwaysApply: false
 
 When triggered, review key project documentation files to understand the project structure, goals, and recent changes before proceeding with any coding tasks.
 
+- IMPORTANT EXCLUSION RULE: When indexing any of these files, completely ignore the `.cursor` folder and `.archive` folder and all their contents. The `.cursor` folder contains IDE-specific configuration, rules, and settings, while the `.archive` folder contains archived/backup files. Neither folder is part of the actual project functionality and should never be documented in project files, changelogs, or specifications
+
 ## Required Files to Review
 
 Always review these files in order to understand the project context:

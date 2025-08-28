@@ -7,7 +7,7 @@ alwaysApply: false
 # Document Updating Rules
 
 - Do not ask me if I want to proceed, just do it. Do not stop until these files are all updated.
-Update the following files using the rules within this document:
+  Update (or create if they are missing) the following files using the rules within this document:
 
 - Don't use italics or bold formatting.
 
@@ -54,19 +54,27 @@ Strict Formatting and Date Rules:
      `## 2025-06-27 - Friday`
 2. There should only be one `# Changelog` header at the very top of the file. Do not repeat this header for each entry.
 3. Each day's entry must include all four change types (Added, Changed, Fixed, Removed) in this order, even if some are blank.
+
    - Example:
+
      ```
      ## 2025-06-27 - Friday
-     ### Added
-     ### Changed
-     ### Fixed
-     ### Removed
+
+     [Added]
+     - description of something that was added
+     [Changed]
+     - description of something that was changed
+     [Fixed]
+     - description of something that was fixed
+     [Removed]
+     - description of something that was removed
      ```
-4. Do not use dashes, bullets, or lists for the change types. Each type should be a single line, starting with the type and a colon.
+
+4. Use `[Added]`, `[Changed]`, `[Fixed]`, `[Removed]` format with square brackets. Each section can have multiple bullet points describing the changes.
 5. Never use example dates in the actual changelog. Always use the current date.
 6. New entries must always be added at the top, so the most recent day is first (reverse chronological order).
 7. No extra blank lines between entries, except a single blank line between each day's entry.
-8. If nothing was done for a change type on that day, leave the line blank (e.g., 'Added: ').
+8. If nothing was done for a change type on that day, leave the line blank (e.g., '[Added]' with no bullet points below).
 
 #### How to obtain the date:
 
@@ -107,21 +115,23 @@ Troubleshooting:
 # Changelog
 
 ## 2025-06-27 - Friday
-### Added
-### Changed
-### Fixed
-### Removed
 
-## 2025-06-26 - Thursday
-### Added
+[Added]
 - New features
 - Another new feature
-### Changed
+[Changed]
 - Updates
-### Fixed
+[Fixed]
 - Bug Fixes
-### Removed
+[Removed]
 - Removed file.txt
+
+## 2025-06-26 - Thursday
+
+[Added]
+[Changed]
+[Fixed]
+[Removed]
 ```
 
 ### .gitignore
