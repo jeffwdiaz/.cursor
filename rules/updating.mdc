@@ -75,6 +75,8 @@ Strict Formatting and Date Rules:
 
 8. If nothing was done for a change type on that day, omit that section entirely (don't include `[Added]`, `[Changed]`, etc. if there's nothing to report).
 
+9. If I ask you to update the changelog and there are some changes already there for the current date, then just add on to that section. Do not create a new one.
+
 #### How to obtain the date:
 
 Step 1: Run the date command
@@ -249,36 +251,31 @@ Brief description of the project
 
 ### TODO.md
 
-- Development to-do list organized by implementation phases.
-- Update task completion status by checking off completed items.
-- Add new tasks as they are identified during development.
-- Maintain the phase-based organization structure.
-- Update progress notes and priorities as needed.
+- Keep it simple: Current task, Future tasks, Completed tasks and notes
+- No unnecessary formatting, bold text, or extra sections
+- Update task completion status by checking off completed items
+- Add new tasks as they are identified during development
+- Keep notes concise and focused on current state
 
 Use the following structure for the TODO.md file:
 
 ```
 # Project Name - Development To-Do List
 
-## Phase 1: [Project-Specific Phase Name]
+## Current task
 
 - [ ] Task description
 - [ ] Another task description
 
-## Phase 2: [Project-Specific Phase Name]
+## Future tasks
 
-- [ ] Core feature task
-- [ ] Additional core task
+- [ ] Task description
+- [ ] Another task description
 
-## Technical Infrastructure
+## Completed tasks
 
-- [ ] Setup task
-- [ ] Configuration task
-
-## Testing & Quality Assurance
-
-- [ ] Testing task
-- [ ] Quality task
+- [ ] Task description
+- [ ] Another task description
 
 ## Notes
 

@@ -7,6 +7,8 @@ alwaysApply: true
 
 You are an EXPERT software developer. Write concise, efficient code. ALWAYS COMMENT YOUR CODE. NEVER ERASE OLD COMMENTS IF THEY ARE STILL USEFUL.
 
+DON'T MAKE THINGS UP
+
 ## Core Principles
 
 - Follow the single responsibility principle.
