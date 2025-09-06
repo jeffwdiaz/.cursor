@@ -62,25 +62,35 @@ git rm --cached <filename>
 
 ## 3. Submodules
 
+### Adding Submodules
+
 ```bash
-# Add submodule
+# Add submodule (auto-initializes)
 git submodule add <repository-url> <path>
 
-# Initialize submodules
+# Check submodule status
+git submodule status
+```
+
+### Working with Existing Submodules
+
+```bash
+# Initialize submodules (when cloning a repo with submodules)
 git submodule init
 
-# Update submodules
+# Update submodules to latest commits
 git submodule update
 
-# Update all submodules
+# Initialize and update all submodules
 git submodule update --init --recursive
 
 # Force update submodules
 git submodule update --init --recursive --force
+```
 
-# Check submodule status
-git submodule status
+### Managing Submodules
 
+```bash
 # Remove submodule
 git submodule deinit <path>
 git rm <path>
