@@ -1,0 +1,6 @@
+# Automatically handle line ending conversions for all text files
+# This ensures consistent line endings (LF) across different operating systems
+# - Windows uses CRLF (\r\n) 
+# - Mac/Linux use LF (\n)
+# Git will automatically convert to LF when committing and back to CRLF when checking out on Windows
+* text=auto
