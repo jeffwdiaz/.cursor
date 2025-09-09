@@ -1,6 +1,5 @@
 ---
-description: Use when coding with the AutoHotkey programming language
-globs: 
+globs: .ahk
 alwaysApply: false
 ---
 # AutoHotkey
