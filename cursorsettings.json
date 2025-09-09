@@ -1,0 +1,105 @@
+{
+  "svelte.enable-ts-plugin": true,
+
+  // git settings
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "never",
+
+  // project manager
+  "projectManager.git.baseFolders": [
+    "C:\\Users\\jeffw\\Desktop\\Workspace\\github"
+  ],
+
+  // prettier
+  "prettier.experimentalTernaries": true,
+  "prettier.bracketSameLine": true,
+  "prettier.singleAttributePerLine": true,
+
+  // CURSOR-SPECIFIC SETTINGS
+  // --------------------------------------------------
+
+  "cursor.composer.shouldAutoScrollToBottom": false,
+  "cursor.composer.shouldAllowCustomModes": true,
+  "cursor.diffs.useCharacterLevelDiffs": true,
+  "cursor.terminal.usePreviewBox": true,
+  "cursor.composer.textSizeScale": 1,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+
+  // VS CODE CORE SETTINGS
+  // --------------------------------------------------
+
+  // -> typography
+  "editor.fontFamily": "'Space Mono'",
+  // "editor.fontFamily": "'Cartograph CF'",
+  // "editor.fontFamily": "'Brass Mono Code'",
+  // "editor.fontFamily": "'JetBrainsMonoNL NFM Light'",
+  // "editor.fontFamily": "'Terminess Nerd Font'",
+  // "editor.fontFamily": "'Brass Mono Code'",
+
+  "editor.lineHeight": 2,
+  "editor.fontSize": 14,
+
+  // Explorer Settings
+  "explorer.confirmPasteNative": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+
+  // workbench
+  "workbench.iconTheme": "file-icons",
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 20,
+  "workbench.colorCustomizations": {},
+  "editor.tokenColorCustomizations": {
+    "comments": {
+      //"foreground": "#f2096e",
+    }
+  },
+
+  // minimap
+  "editor.minimap.enabled": true,
+  "editor.minimap.size": "fill",
+  "editor.minimap.maxColumn": 100,
+  "editor.minimap.scale": 2,
+  "editor.minimap.renderCharacters": false,
+
+  // word wrap
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80,
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
+  },
+
+  // autosave
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // guides
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.highlightActiveIndentation": true,
+
+  // formatting
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // MISC
+  "debug.disassemblyView.showSourceCode": false,
+  "editor.accessibilitySupport": "off",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "block",
+  "editor.rulers": [80],
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.lineNumbers": "relative",
+
+  // UNORGANIZED SETTINGS
+  // --------------------------------------------------
+
+  "placeholder": "new settings appear below this line",
+  "window.zoomPerWindow": false,
+  "workbench.colorTheme": "Purpler"
+}
